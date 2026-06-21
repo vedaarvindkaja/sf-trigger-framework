@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Case Log Disruption Flow</label>
+    <label>Case Disruption Notification AU</label>
     <protected>false</protected>
     <values>
         <field>After_Delete__c</field>
@@ -24,7 +24,7 @@
     </values>
     <values>
         <field>Apex_Class_Name__c</field>
-        <value xsi:type="xsd:string">TriggerActionFlow</value>
+        <value xsi:type="xsd:string">Case_DisruptionNotification</value>
     </values>
     <values>
         <field>Before_Delete__c</field>
@@ -48,7 +48,7 @@
     </values>
     <values>
         <field>Description__c</field>
-        <value xsi:type="xsd:string">Log disruption, after update</value>
+        <value xsi:type="xsd:string">Disruption notification, after update</value>
     </values>
     <values>
         <field>Entry_Criteria__c</field>
@@ -56,11 +56,11 @@
     </values>
     <values>
         <field>Flow_Name__c</field>
-        <value xsi:type="xsd:string">Case_AfterUpdate_LogDisruption</value>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>Order__c</field>
-        <value xsi:type="xsd:double">30.0</value>
+        <value xsi:type="xsd:double">20.0</value>
     </values>
     <values>
         <field>Required_Permission__c</field>

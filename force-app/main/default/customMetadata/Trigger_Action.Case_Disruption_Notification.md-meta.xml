@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" label="Case Disruption Notification">
-    <values><field>Apex_Class_Name__c</field><value xsi:type="xsd:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Case_DisruptionNotification</value></values>
-    <values><field>Order__c</field><value xsi:type="xsd:double" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20</value></values>
-    <values><field>After_Insert__c</field><value xsi:type="xsd:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Case</value></values>
-    <values><field>After_Update__c</field><value xsi:type="xsd:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Case</value></values>
-    <values><field>Bypass_Execution__c</field><value xsi:type="xsd:boolean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">false</value></values>
-</CustomMetadata>
