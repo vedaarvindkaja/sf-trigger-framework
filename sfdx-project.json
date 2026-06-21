@@ -1,0 +1,11 @@
+{
+  "packageDirectories": [
+    { "path": "force-app", "default": true },
+    { "path": "trigger-actions-framework", "default": false }
+  ],
+  "name": "sf-architect-prep",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "61.0"
+}
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Admin-owned record of flight disruptions, written by an autolaunched Flow registered as an ordered Trigger Action. Demonstrates Apex + Flow coexistence in one ordered registry.</description>
+    <enableReports>true</enableReports>
+    <label>Disruption Log</label>
+    <pluralLabel>Disruption Logs</pluralLabel>
+    <nameField><label>Disruption Log Number</label><type>AutoNumber</type><displayFormat>DL-{00000000}</displayFormat></nameField>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

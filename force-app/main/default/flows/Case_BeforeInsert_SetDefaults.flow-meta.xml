@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Autolaunched Flow registered as an ordered Trigger Action (BEFORE insert, order 5). Runs BEFORE the Apex actions. Demonstrates the classic before-context Flow job: default-value assignment on the same record (sets Priority = Medium when blank). The framework writes the modified "record" variable back onto the trigger record, so no DML is needed. Conforms to the framework contract: input variable "record", type Case, input + output.</description>
+    <environments>Default</environments>
+    <interviewLabel>Case Before Insert Set Defaults {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case Before Insert Set Defaults</label>
+    <processType>AutoLaunchedFlow</processType>
+    <status>Active</status>
+
+    <variables>
+        <name>record</name>
+        <dataType>SObject</dataType>
+        <objectType>Case</objectType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector><targetReference>Is_Priority_Blank</targetReference></connector>
+    </start>
+
+    <decisions>
+        <name>Is_Priority_Blank</name>
+        <label>Is Priority Blank?</label>
+        <locationX>50</locationX>
+        <locationY>120</locationY>
+        <defaultConnectorLabel>Has Priority</defaultConnectorLabel>
+        <rules>
+            <name>Priority_Blank</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>record.Priority</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue><booleanValue>true</booleanValue></rightValue>
+            </conditions>
+            <connector><targetReference>Set_Default_Priority</targetReference></connector>
+            <label>Blank</label>
+        </rules>
+    </decisions>
+
+    <!-- No DML: just modify the record variable; framework writes it back. -->
+    <assignments>
+        <name>Set_Default_Priority</name>
+        <label>Set Default Priority</label>
+        <locationX>50</locationX>
+        <locationY>240</locationY>
+        <assignmentItems>
+            <assignToReference>record.Priority</assignToReference>
+            <operator>Assign</operator>
+            <value><stringValue>Medium</stringValue></value>
+        </assignmentItems>
+    </assignments>
+</Flow>
