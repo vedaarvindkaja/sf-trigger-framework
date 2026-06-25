@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Key__c</fullName>
+    <label>Work Key</label>
+    <description>The AsyncWorkBuffer key this record resolves. Must match the key services register under.</description>
+    <inlineHelpText>The AsyncWorkBuffer key this record resolves (e.g. CaseNotify).</inlineHelpText>
+    <type>Text</type>
+    <length>255</length>
+    <required>true</required>
+    <unique>true</unique>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+</CustomField>

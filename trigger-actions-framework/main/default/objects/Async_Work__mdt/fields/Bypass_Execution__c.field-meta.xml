@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_Execution__c</fullName>
+    <label>Bypass Execution</label>
+    <description>When checked, the dispatcher skips this work key. Drained records are discarded for the transaction.</description>
+    <inlineHelpText>When checked, the dispatcher skips this work key.</inlineHelpText>
+    <type>Checkbox</type>
+    <defaultValue>false</defaultValue>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+</CustomField>

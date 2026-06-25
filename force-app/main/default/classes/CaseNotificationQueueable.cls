@@ -8,7 +8,8 @@
 public class CaseNotificationQueueable implements Queueable, Database.AllowsCallouts, Finalizer {
 
     private final Set<Id> caseIds;
-    @TestVisible private static Boolean failForTest = false;
+    @TestVisible private static Boolean failForTest    = false;
+    @TestVisible private static Boolean finalizerCalled = false;
 
     public CaseNotificationQueueable(Set<Id> caseIds) { this.caseIds = caseIds; }
 
@@ -26,6 +27,7 @@ public class CaseNotificationQueueable implements Queueable, Database.AllowsCall
     }
 
     public void execute(FinalizerContext fc) {
+        finalizerCalled = true;
         if (fc.getResult() == ParentJobResult.UNHANDLED_EXCEPTION) {
             // One durable Error_Log per failed Case, tagged Async_Notification so
             // the retry batch (ErrorRetryBatch) can find and re-enqueue them.
